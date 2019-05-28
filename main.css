@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+.wrap {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    background:black;
+}
+
+.value {
+    text-align:center;
+    font-family:Bangers;
+    color:white;
+    font-size:55px;
+    letter-spacing:2px;
+  }
+
+.value > #value {
+  display:block;
+  font-size:100px;
+}
+
+.value > #details {
+  display:block;
+  font-size:35px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: greenyellow;
+}
