@@ -7,7 +7,7 @@ const units = [1473.4770, 1428.5710];
 const totalUnits = units.reduce((a, b) => a + b);
 const startDate = [new Date("March 10, 2019"), new Date("May 28, 2019")];
 const startNAV = [10.18, 10.50];
-const startValue = Math.round(startNAV.reduce((r, a, i) => r + a * units[i], 0) * 100) / 100;
+const startValue = Math.round(startNAV.reduce((r, a, i) => r + a * units[i], 0));
 
 axios.get(URL)
      .then((res => res.data))
@@ -17,7 +17,7 @@ axios.get(URL)
         } else {
             var currentStats = res.data[0];
             currentStats.nav = Math.round(currentStats.nav * 100) / 100;
-            currentStats.value = Math.round(totalUnits * currentStats.nav * 100)/100;
+            currentStats.value = Math.round(totalUnits * currentStats.nav);
             if(currentStats.value >= startValue)
                 value.classList.add("green");
             else
