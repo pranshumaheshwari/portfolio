@@ -17,7 +17,7 @@ axios.get(URL)
         } else {
             var currentStats = res.data[0];
             currentStats.nav = Math.round(currentStats.nav * 100) / 100;
-            currentStats.value = Math.round(totalUnits * currentStats.nav);
+            currentStats.value = Math.round(totalUnits * currentStats.nav * 100) /100;
             if(currentStats.value >= startValue)
                 value.classList.add("green");
             else
