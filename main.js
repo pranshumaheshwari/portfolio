@@ -3,10 +3,10 @@ const alternateURL = `https://www.quandl.com/api/v3/datasets/AMFI/146127.json`;
 
 var value = document.getElementById("value");
 var details = document.getElementById("details");
-const units = [1473.4770, 1428.5710];
+const units = [1473.4770, 1428.5710, 979.4320];
 const totalUnits = units.reduce((a, b) => a + b);
-const startDate = [new Date("March 10, 2019"), new Date("May 28, 2019")];
-const startNAV = [10.18, 10.50];
+const startDate = [new Date("March 10, 2019"), new Date("May 28, 2019"), new Date("June 06, 2019")];
+const startNAV = [10.18, 10.50, 10.21];
 const startValue = Math.round(startNAV.reduce((r, a, i) => r + a * units[i], 0));
 
 axios.get(URL)
