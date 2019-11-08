@@ -5,16 +5,16 @@ var value = document.getElementById("value");
 var details = document.getElementById("details");
 const units = [
                 [1473.4770, 1428.5710, 979.4320, 1990.0500],
-                [216.296]
+                [216.2960, 291.7834]
             ];
 const totalUnits = units.map(a => a.reduce((r, v) => r + v, 0));
 const startDate = [
                     [new Date("March 10, 2019"), new Date("May 28, 2019"), new Date("June 06, 2019"), new Date("July 02, 2019")],
-                    [new Date("August 21, 2019")]
+                    [new Date("August 21, 2019"), new Date("November 07, 2019")]
                 ];
 const startNAV = [
                     [10.18, 10.50, 10.21, 10.05],
-                    [46.233]
+                    [46.233, 51.408]
                 ];
 const startValue = startNAV.map((a, i) => Math.round(a.reduce((r, a, j) => r + a * units[i][j], 0)));
 const totalStartValue = startValue.reduce((r, a) => r + a, 0)
