@@ -4,13 +4,15 @@ body {
 
 .wrap {
     display:flex;
-    align-items:center;
+    /* align-items:center; */
     justify-content:center;
     height:150vh;
     background:black;
 }
 
 .value {
+    position: absolute;
+    top: 25vh;
     text-align:center;
     font-family:Bangers;
     color:white;
